@@ -1,0 +1,67 @@
+section{
+   margin-left :320px;
+   height: 200px;
+}
+
+.container {
+    margin-top: 120px;
+    margin-bottom: 120px
+}
+
+.btn-lg,
+a:focus,
+a:active {
+    outline: none !important;
+    box-shadow: none !important
+}
+
+.card-1 {
+    box-shadow: 2px 4px 15px 0px  white;
+}
+
+p {
+    font-size: 13px
+}
+
+.small {
+    font-size: 9px !important
+}
+
+.cursor-pointer {
+    cursor: pointer
+}
+
+.btn-round-lg {
+    border-radius: 22.5px;
+    background-color: rgb(206, 231, 219);
+    color: #0a7e30;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    padding: 8px 20px 8px 20px !important;
+    border: 1px solid #fff
+}
+
+.btn-round-lg:hover {
+    background-color: #fff;
+    color: #128f38;
+    border: 1px solid #fff
+}
+
+.btn-round-lg:focus {
+    border: 1px solid #fff !important
+}
+
+.card {
+    background-color: rgba(241, 101, 101, 0.788);
+    color: white
+}
+@media screen and (max-width: 600px)
+{ section{
+    height: 650px;
+  margin-left: 0;
+}
+button{
+    margin-left :0;
+}
+}

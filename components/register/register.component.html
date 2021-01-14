@@ -1,0 +1,67 @@
+<section><div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="guest-form-card card">
+  
+        <div class="card-header text-center">
+          <h2>S'inscrire</h2>
+        </div>
+       <div class="card-body">
+      <form #registerForm="ngForm" (ngSubmit)="register()">
+      <div class="form-group">
+        <label for="username">Nom</label>
+        <input id="username" class="form-control" [ngClass]="{ 'is-invalid': username.touched && username.invalid }" name="username" #username="ngModel" [(ngModel)]="model.username" required />
+        <span class="invalid-feedback"> Saisir votre Nom</span>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Prenom</label>
+        <input type="text" id="prenom" name="prenom" class="form-control" [ngClass]="{ 'is-invalid': prenom.touched && prenom.invalid }" #prenom="ngModel" [(ngModel)]="model.prenom" required />
+        <span class="invalid-feedback">Saisir votre Prenom</span>
+      </div>
+      <div class="form-group">
+        <label for="username">Email</label>
+        <input id="username" class="form-control" [ngClass]="{ 'is-invalid': username.touched && username.invalid }" name="username" #username="ngModel" [(ngModel)]="model.username" required />
+        <span class="invalid-feedback"> Saisir votre email.</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Adresse</label>
+        <label>Rue</label>
+        <input type="text" id="rue" name="rue" class="form-control" [ngClass]="{ 'is-invalid': rue.touched && rue.invalid }" #rue="ngModel" [(ngModel)]="model.rue" placeholder="15 rue rue elfalleh" required />
+        <span class="invalid-feedback">champs obligatoire </span>
+      </div>
+      <div class="form-group">
+        <label>ville</label>
+        <input type="text" id="ville" name="ville" class="form-control" [ngClass]="{ 'is-invalid': ville.touched && ville.invalid }" #ville="ngModel" [(ngModel)]="model.ville" placeholder="Morneg" required />
+        <span class="invalid-feedback">champs obligatoire </span>
+    </div>
+    <div class="form-group">
+        <label>Code Postale</label>
+        <input type="text" id="code" name="code" class="form-control" [ngClass]="{ 'is-invalid': code.touched && code.invalid }" #code="ngModel" [(ngModel)]="model.code" placeholder="2090" required />
+        <span class="invalid-feedback">champs obligatoire </span>
+    </div>
+    <div class="form-group">
+        <label>Region</label>
+        <input type="text" id="region" name="region" class="form-control" [ngClass]="{ 'is-invalid': region.touched && region.invalid }" #region="ngModel" [(ngModel)]="model.region" required  placeholder="Ben Arous"/>
+        <span class="invalid-feedback">champs obligatoire</span>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="pass" name="pass" class="form-control" [ngClass]="{ 'is-invalid': pass.touched && pass.invalid }" #pass="ngModel" [(ngModel)]="model.pass" required  placeholder="inserer au moins :majuscule/minuscule,numero,caractere"/>
+        <span class="invalid-feedback">champs obligatoire</span>
+    </div>
+    <div class="form-group">
+        <label>Confirmer password</label>
+        <input type="password" id="pass1" name="pass1" class="form-control" [ngClass]="{ 'is-invalid': pass1.touched && pass1.invalid }" #pass1="ngModel" [(ngModel)]="model.pass1" required  placeholder="il doit etre identique au champs password"/>
+        <span class="invalid-feedback">champs obligatoire</span>
+    </div>
+    <div class="form-group">
+        <input type="checkbox" id="check" name="check" #remember="ngModel" [(ngModel)]="model.check">
+        <label class="ml-1" for="check">Accepter les conditions generales</label>
+      </div>
+      <button class="btn btn-primary btn-block" [disabled]="registerForm.invalid">Se connecter</button>
+    </form>
+       </div>
+      </div>
+      </div>
+      </div>
+</section>
